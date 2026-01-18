@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 
 
 class RecoveryMetrics(BaseModel):
-    sleep_hours: float = Field(..., description="Hours of sleep")
+    sleep_hours: float = Field(..., ge=2, le=9 description="Hours of sleep")
     sleep_quality: int = Field(..., ge=1, le=5)
     fatigue_level: int = Field(..., ge=1, le=5)
     muscle_soreness: int = Field(..., ge=1, le=5)
