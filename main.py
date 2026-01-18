@@ -13,7 +13,8 @@ class RecoveryMetrics(BaseModel):
     muscle_soreness: int = Field(..., ge=1, le=5)
     prev_day_intensity: float = Field(..., ge=0, le=1)
     workout_streak: int = Field(..., ge=0, le=21)
-    resting_hr: int = Field(..., description="Resting heart rate")
+    resting_hr: int = Field(..., ge=45, le=100,
+                            description="Resting heart rate")
 
 
 app = FastAPI()
