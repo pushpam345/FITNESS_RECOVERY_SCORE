@@ -28,4 +28,4 @@ async def predict_recovery(data: RecoveryMetrics):
 
     prediction = model.predict(input_df)
 
-    return {"predicted_recovery_score": float(prediction[0])}
+    return {(prediction[0])}
